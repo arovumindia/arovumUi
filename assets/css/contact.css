@@ -1,0 +1,29 @@
+/* Conversion and footer components kept separately for easy future replacement. */
+.contact { padding: 132px 0; background: linear-gradient(115deg, var(--paper) 0 58%, #f6e8bd 58% 100%); }
+.contact-grid { grid-template-columns: .82fr 1.18fr; gap: clamp(54px, 9vw, 135px); }
+.contact-form { gap: 17px; padding: clamp(24px, 4vw, 44px); border: 0; box-shadow: 14px 14px 0 var(--forest); }
+.contact-form .form-intro { padding-bottom: 19px; }
+.contact-form .form-intro span { background: var(--leaf); font-size: 16px; }
+.contact-form input, .contact-form select, .contact-form textarea { background: #fff; border-color: rgba(0, 102, 61, .16); }
+.contact-form .product-options { gap: 7px; }
+.contact-form .product-options span { text-align: center; padding: 12px 9px; }
+.contact-form .btn { margin-top: 7px; min-width: 185px; }
+.form-note { margin: -2px 0 0; color: var(--muted); font-size: 11px; }
+
+footer { padding: 67px 0 26px; }
+footer .footer-top { display: grid; grid-template-columns: 1.35fr .7fr 1fr; gap: 30px; align-items: start; }
+footer .footer-top > div:first-child { text-align: left; }
+footer .footer-top > div > p { margin: 22px 0 0; color: #e9eedf; font: 19px var(--serif); }
+footer .footer-links { display: flex; flex-direction: column; gap: 11px; text-align: left; font: 12px var(--sans); letter-spacing: 0; }
+footer .footer-links > span { margin-bottom: 6px; color: var(--leaf); font: 9px var(--mono); letter-spacing: .1em; }
+footer .footer-bottom { display: flex; justify-content: space-between; margin-top: 62px; padding-top: 18px; border-top: 1px solid rgba(233,238,223,.24); color: #d4dfd0; font: 9px var(--mono); letter-spacing: .06em; }
+footer .footer-bottom a { text-decoration: none; }
+.footer-instagram svg { margin-right: 5px; }
+
+@media (max-width: 760px) {
+  .contact { padding: 84px 0; background: var(--paper); }
+  .contact-form { box-shadow: 8px 8px 0 var(--forest); }
+  footer .footer-top { display: grid; grid-template-columns: 1fr 1fr; gap: 36px 20px; }
+  footer .footer-top > div:first-child { grid-column: 1 / -1; }
+  footer .footer-bottom { display: flex; margin-top: 42px; }
+}

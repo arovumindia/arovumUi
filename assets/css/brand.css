@@ -1,0 +1,144 @@
+/* Brand-specific overrides: uses the supplied Arovum logo without changing its artwork. */
+:root {
+  --forest: #00663d;
+  --leaf: #ffbc10;
+  --paper: #fffaf0;
+  --coral: #ef7042;
+  --muted: #456054;
+}
+.logo-image {
+  width: 138px;
+  height: 68px;
+  display: block;
+  overflow: hidden;
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+.social-link {
+  margin: 21px 0 0;
+  font: 12px var(--mono);
+  letter-spacing: .03em;
+}
+
+.social-link a { text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 4px; }
+.social-link svg, .footer-instagram svg { width: 15px; height: 15px; fill: none; stroke: currentColor; stroke-width: 1.8; vertical-align: -3px; margin-right: 7px; }
+.social-link .instagram-dot { fill: currentColor; stroke: none; }
+
+.product-ribbon { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin-top: 36px; color: var(--leaf); font: 10px var(--mono); letter-spacing: .07em; }
+.product-ribbon i { color: var(--coral); font-style: normal; font-size: 16px; }
+
+.hero-art::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: .18;
+  background: repeating-radial-gradient(circle at 105% 105%, transparent 0 36px, var(--forest) 37px 38px, transparent 39px 72px);
+}
+
+.hero-art > * { position: absolute; }
+
+.origin-badge {
+  z-index: 2;
+  top: 22px;
+  left: 7%;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 11px;
+  background: var(--forest);
+  color: #fff;
+  font: 9px var(--mono);
+  letter-spacing: .09em;
+}
+
+.origin-badge span { color: var(--leaf); font-size: 13px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: .95fr 1.05fr;
+  gap: clamp(42px, 8vw, 120px);
+  align-items: start;
+}
+
+.contact-copy > p:not(.label):not(.social-link) {
+  max-width: 390px;
+  margin: 28px 0;
+  color: var(--muted);
+  line-height: 1.75;
+  font-size: 14px;
+}
+
+.contact-detail {
+  display: inline-flex;
+  gap: 28px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--forest);
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.contact-detail span { color: var(--coral); }
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+  padding: clamp(24px, 4vw, 42px);
+  background: #fff;
+  border: 1px solid rgba(0, 102, 61, .16);
+  box-shadow: 12px 12px 0 var(--leaf);
+}
+
+.form-intro { display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0, 102, 61, .18); padding-bottom: 15px; }
+.form-intro span { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--leaf); font: 10px var(--mono); }
+.form-intro p { margin: 0; font: 16px var(--serif); }
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--forest);
+  font: 10px var(--mono);
+  letter-spacing: .08em;
+}
+
+.contact-form input, .contact-form select, .contact-form textarea {
+  width: 100%;
+  appearance: none;
+  border: 1px solid rgba(0, 102, 61, .23);
+  border-radius: 0;
+  padding: 13px 12px;
+  background: #fffdf8;
+  color: var(--forest);
+  font: 14px var(--sans);
+}
+
+.contact-form textarea { resize: vertical; min-height: 104px; }
+.contact-form input:focus, .contact-form select:focus, .contact-form textarea:focus { outline: 2px solid var(--leaf); outline-offset: 1px; }
+.contact-form .btn { justify-content: space-between; width: max-content; border: 0; cursor: pointer; margin-top: 3px; }
+.form-status { min-height: 17px; margin: 0; color: var(--forest); font-size: 12px; }
+
+.contact-form fieldset { margin: 0; padding: 0; border: 0; }
+.contact-form legend { margin-bottom: 9px; color: var(--forest); font: 10px var(--mono); letter-spacing: .08em; }
+.product-options { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.product-options label { position: relative; display: block; cursor: pointer; }
+.product-options input { position: absolute; opacity: 0; pointer-events: none; }
+.product-options span { display: block; padding: 11px 10px; border: 1px solid rgba(0, 102, 61, .23); background: #fffdf8; font: 12px var(--sans); letter-spacing: 0; transition: background .2s, color .2s, border-color .2s; }
+.product-options input:checked + span { border-color: var(--forest); background: var(--forest); color: #fff; }
+.product-options input:focus-visible + span { outline: 2px solid var(--leaf); outline-offset: 1px; }
+
+@media (max-width: 760px) {
+  .logo-image { width: 112px; height: 57px; }
+  .origin-badge { top: 15px; left: 8%; font-size: 8px; }
+  .contact-grid { display: block; }
+  .contact-form { margin-top: 44px; box-shadow: 7px 7px 0 var(--leaf); }
+  .form-row { grid-template-columns: 1fr; }
+  .product-options { grid-template-columns: 1fr; }
+}
