@@ -1,0 +1,62 @@
+.about-hero { padding: 76px 0 88px; }
+.about-hero-grid { display: grid; grid-template-columns: 1fr .88fr; align-items: center; gap: clamp(48px, 8vw, 112px); }
+.about-hero-copy { max-width: 590px; }
+.about-hero-copy .label { margin: 0 0 20px; }
+.about-hero-copy h1 { margin: 0; color: var(--forest); font: 76px/.94 var(--serif); }
+.about-hero-copy h1 em { color: var(--coral); font-weight: 400; }
+.about-hero-copy > p:not(.label) { max-width: 510px; margin: 24px 0 28px; color: var(--muted); font: 17px/1.8 var(--sans); }
+.about-hero-image { position: relative; min-width: 0; margin: 0; aspect-ratio: 4 / 5; max-height: 560px; overflow: hidden; border-radius: 28px; background: #d9e2c5; }
+.about-hero-image img { object-position: center 45%; }
+.about-hero-image figcaption { position: absolute; right: 14px; bottom: 14px; display: grid; gap: 5px; padding: 11px 14px; background: var(--leaf); color: var(--forest); font: 11px var(--mono); }
+.about-hero-image figcaption small { font: 9px/1.4 var(--sans); }
+.about-hero-image figcaption a { color: inherit; }
+.about-story { padding: 84px 0; background: var(--forest); color: #fffaf0; }
+.about-story-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: 64px; }
+.about-story-grid > .label { margin: 12px 0 0; }
+.about-story h2 { max-width: 720px; margin: 0 0 24px; color: #fffaf0; font: 48px/1.08 var(--serif); }
+.about-story p:not(.label) { max-width: 740px; margin: 0 0 16px; color: rgba(255, 250, 240, .82); font: 16px/1.8 var(--sans); }
+.about-principles { padding: 88px 0 96px; }
+.about-principles-heading { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 44px; }
+.about-principles-heading .label { margin: 0; }
+.about-principles-heading h2 { margin: 0; color: var(--forest); font: 52px/1 var(--serif); }
+.about-principles-heading h2 em { color: var(--coral); font-weight: 400; }
+.about-principle-list { border-top: 1px solid var(--line); }
+.about-principle-list article { display: grid; grid-template-columns: 100px 1fr; gap: 20px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+.about-principle-list article > span { color: var(--coral); font: 12px var(--mono); }
+.about-principle-list h3 { margin: 0 0 8px; color: var(--forest); font: 26px/1.2 var(--serif); }
+.about-principle-list p { margin: 0; color: var(--muted); font: 15px/1.7 var(--sans); }
+.about-next { padding: 54px 0; background: var(--coral); color: #fffaf0; }
+.about-next-inner { display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+.about-next .label { margin: 0 0 12px; color: rgba(255, 250, 240, .8); }
+.about-next h2 { margin: 0; font: 42px/1.1 var(--serif); }
+.about-next .btn { flex: 0 0 auto; }
+.about-teaser { padding: 64px 0; background: #f1eadc; }
+.about-teaser-inner { display: grid; grid-template-columns: 1.1fr .9fr auto; align-items: center; gap: 36px; }
+.about-teaser-inner .label { margin: 0 0 12px; }
+.about-teaser h2 { max-width: 540px; margin: 0; color: var(--forest); font: 38px/1.08 var(--serif); }
+.about-teaser-inner > p { max-width: 430px; margin: 0; color: var(--muted); font: 15px/1.75 var(--sans); }
+.about-teaser-inner .btn { white-space: nowrap; }
+
+@media (max-width: 760px) {
+  .about-teaser { padding: 48px 0; }
+  .about-teaser-inner { grid-template-columns: 1fr; gap: 18px; }
+  .about-teaser h2 { font-size: 32px; }
+  .about-teaser-inner .btn { justify-self: start; }
+  .about-hero { padding: 54px 0 64px; }
+  .about-hero-grid { grid-template-columns: 1fr; gap: 34px; }
+  .about-hero-copy h1 { font-size: 52px; }
+  .about-hero-copy > p:not(.label) { font-size: 15px; }
+  .about-hero-image { width: 100%; max-height: 430px; aspect-ratio: 1 / 1.05; }
+  .about-story { padding: 60px 0; }
+  .about-story-grid { grid-template-columns: 1fr; gap: 22px; }
+  .about-story h2 { font-size: 38px; }
+  .about-story p:not(.label) { font-size: 15px; }
+  .about-principles { padding: 62px 0 70px; }
+  .about-principles-heading { display: block; margin-bottom: 30px; }
+  .about-principles-heading h2 { margin-top: 14px; font-size: 42px; }
+  .about-principle-list article { grid-template-columns: 42px 1fr; gap: 10px; padding: 22px 0; }
+  .about-principle-list h3 { font-size: 23px; }
+  .about-next { padding: 42px 0; }
+  .about-next-inner { align-items: flex-start; flex-direction: column; }
+  .about-next h2 { font-size: 36px; }
+}
